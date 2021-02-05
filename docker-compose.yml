@@ -1,4 +1,4 @@
-version: '3.0'
+version: '3.7'
 
 services:
   nginx:
@@ -49,8 +49,8 @@ services:
     volumes:
       - ./storage/minio:/data
     environment:
-      MINIO_ACCESS_KEY: minio_access_key
-      MINIO_SECRET_KEY: minio_secret_key
+      MINIO_ACCESS_KEY: minio_admin
+      MINIO_SECRET_KEY: minio_admin
     command: server --address 0.0.0.0:9000 /data
 
 volumes:
